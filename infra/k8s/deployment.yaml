@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: student-collection1-coll-4a69f2a8217a433698ca4eeb40b7ff08-depl
+  labels:
+    app: student-collection1-coll-4a69f2a8217a433698ca4eeb40b7ff08
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: student-collection1-coll-4a69f2a8217a433698ca4eeb40b7ff08
+  template:
+    metadata:
+      labels:
+        app: student-collection1-coll-4a69f2a8217a433698ca4eeb40b7ff08
+    spec:
+      containers:
+        - name: student-collection1-coll-4a69f2a8217a433698ca4eeb40b7ff08
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:student-collection1-coll-4a69f2a8217a433698ca4eeb40b7ff08
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9026
